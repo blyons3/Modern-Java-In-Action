@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>manning</groupId>
-  <artifactId>modernjavainaction</artifactId>
+  <artifactId>Modern-Java-In-Action</artifactId>
   <version>2.0</version>
 
   <properties>
@@ -58,7 +58,7 @@
           <dependency>
             <groupId>org.ow2.asm</groupId>
             <artifactId>asm</artifactId>
-            <version>6.2.1</version> <!-- Use newer version of ASM -->
+            <version>7.2</version>
           </dependency>
         </dependencies>
       </plugin>
