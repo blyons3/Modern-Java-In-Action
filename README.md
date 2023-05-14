@@ -1,5 +1,7 @@
-Java8InAction
+Modern Java In Action / Java 8 In Action
 ===============
+
+Attention:  I have no rights to this source code, it is copied here for convenience purposes.
 
 This repository contains all the source code for the examples and quizzes in the book Java 8 in Action: Lambdas, Streams and functional-style programming.
 
