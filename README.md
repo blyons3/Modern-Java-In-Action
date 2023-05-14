@@ -2,6 +2,7 @@ Modern Java In Action / Java 8 In Action
 ===============
 
 Attention:  I have no rights to this source code, it is copied here for convenience.
+The current source code will deploy and run on Java 11 and 17.  Java 8 currently has a few bugs, so the caveat emptor.
 
 This repository contains all the source code for the examples and quizzes in the book Java 8 in Action: Lambdas, Streams and functional-style programming.
 
