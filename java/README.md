@@ -43,7 +43,7 @@ $ java lambdasinaction/chap1/FilteringApples
 
 Alternatively you can compile the files manually inside the directory src/main/java
 
-You can also import the project in your favorite IDE:
+You can also import the project into your favorite IDE:
 
 * In IntelliJ use "File->Open" menu and navigate to the folder where the project resides. 
   Set the Sources root to the src/main/java folder.  Note: this is not standard, but intelliJ will be happier 
