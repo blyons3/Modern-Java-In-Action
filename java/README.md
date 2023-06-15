@@ -45,8 +45,8 @@ Alternatively you can compile the files manually inside the directory src/main/j
 
 You can also import the project in your favorite IDE:
 
-* In IntelliJ use "File->Open" menu and navigate to the folder where the project resides
-  Set the Sources root to the src/main/java folder.  Note: this is not standard, but intelliJ will be happier
+* In IntelliJ use "File->Open" menu and navigate to the folder where the project resides. 
+  Set the Sources root to the src/main/java folder.  Note: this is not standard, but intelliJ will be happier 
   and not get confused with the Scala project.
 
 * In Eclipse use "File->Import->Existing Maven Projects" (also modify "Redundant super interfaces" to report as Warnings instead of Errors
