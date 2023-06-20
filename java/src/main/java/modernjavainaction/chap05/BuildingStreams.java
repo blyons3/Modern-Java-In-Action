@@ -16,7 +16,7 @@ public class BuildingStreams {
     stream.map(String::toUpperCase).forEach(System.out::println);
 
     // Stream.empty
-    Stream<String> emptyStream = Stream.empty();
+    // Stream<String> emptyStream = Stream.empty();
 
     // Arrays.stream
     int[] numbers = { 2, 3, 5, 7, 11, 13 };
@@ -47,12 +47,7 @@ public class BuildingStreams {
         .limit(5)
         .forEach(System.out::println);
 
-    IntStream.generate(new IntSupplier() {
-      @Override
-      public int getAsInt() {
-        return 2;
-      }
-    }).limit(5).forEach(System.out::println);
+    IntStream.generate(() -> 2).limit(5).forEach(System.out::println);
 
     IntSupplier fib = new IntSupplier() {
 
@@ -72,7 +67,11 @@ public class BuildingStreams {
         .limit(10)
         .forEach(System.out::println);
 
-    long uniqueWords = Files.lines(Paths.get("lambdasinaction/chap5/data.txt"), Charset.defaultCharset())
+    String currentPath = new java.io.File(".").getCanonicalPath();
+    System.out.println("Current dir:" + currentPath);
+
+    long uniqueWords = Files.lines(Paths.get("./src/main/resources/modernjavainaction/chap05/data.txt"),
+                    Charset.defaultCharset())
         .flatMap(line -> Arrays.stream(line.split(" ")))
         .distinct()
         .count();

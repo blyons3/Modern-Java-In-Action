@@ -23,7 +23,7 @@ public class Lambdas {
     List<Apple> greenApples = filter(inventory, (Apple a) -> a.getColor() == Color.GREEN);
     System.out.println(greenApples);
 
-    Comparator<Apple> c = (Apple a1, Apple a2) -> a1.getWeight() - a2.getWeight();
+    Comparator<Apple> c = Comparator.comparingInt(Apple::getWeight);
 
     // [Apple{color=GREEN, weight=80}, Apple{color=RED, weight=120}, Apple{color=GREEN, weight=155}]
     inventory.sort(c);
