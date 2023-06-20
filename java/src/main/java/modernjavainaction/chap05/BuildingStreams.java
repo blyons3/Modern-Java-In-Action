@@ -1,7 +1,9 @@
 package modernjavainaction.chap05;
 
+import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.function.IntSupplier;
@@ -70,13 +72,20 @@ public class BuildingStreams {
     String currentPath = new java.io.File(".").getCanonicalPath();
     System.out.println("Current dir:" + currentPath);
 
-    long uniqueWords = Files.lines(Paths.get("./src/main/resources/modernjavainaction/chap05/data.txt"),
-                    Charset.defaultCharset())
-        .flatMap(line -> Arrays.stream(line.split(" ")))
-        .distinct()
-        .count();
+    try (Stream<String> fileStream = Files.lines(Paths.get("./src/main/resources/modernjavainaction/chap05/data.txt"),
+                    Charset.defaultCharset())){
 
-    System.out.println("There are " + uniqueWords + " unique words in data.txt");
+      long uniqueWords = fileStream
+              .flatMap(line -> Arrays.stream(line.split(" ")))
+              .distinct()
+              .count();
+
+      System.out.println("There are " + uniqueWords + " unique words in data.txt");
+
+    }
+    catch(IOException ioException){
+      System.out.println(ioException.getMessage());
+    }
   }
 
 }
